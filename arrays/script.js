@@ -14,7 +14,12 @@ let animals = ['cat', 'dog', 'mouse', 'horse', 'bird', 'elephant'];
 console.log(animals);
 
 animals[2] = 'rat';
+// tam kad prideti nauja elementa, mes galime paimti musu sarasa ir
+// naudojant sekanti indeksa po paskutinio (musu atveju tai yra 6, nes paskutinis elementas
+// 'elephant' turi indeksa 5) nustatyti jam reiksme:
 // animals[6] = 'lion';
+// taciau, yra geresnis budas, naudojant push komanda. Push komanda prideda elementa i masyvo gala automatiskai
+// ir mums nereikia skaiciuoti indekso:
 animals.push('lion', 'tiger');
 
 console.log('array ilgis: ', animals.length);
