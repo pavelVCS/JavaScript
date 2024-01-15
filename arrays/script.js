@@ -31,9 +31,3 @@ console.log('paskutinis gyvunas: ', animals[animals.length - 1]);
 
 // let myArr = [1, 4, 5, 'kate', 'bananas', true, false, gyvunas5, animals];
 // console.log(myArr);
-
-// -----------------------------------------------
-
-for (let i = 0; i < animals.length; i++) {
-  console.log(animals[i]);
-}
