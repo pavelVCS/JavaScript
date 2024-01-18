@@ -8,10 +8,12 @@ let animalsString = 'cat dog mouse bird';
 //                  0  1  2  3  4
 let pnoheNumbers = [3, 5, 7, 9, 11];
 
+// kiek vienas zodis masyve turi savo indeksa
 //               0      1       2       3        4          5
 let animals = ['cat', 'dog', 'mouse', 'horse', 'bird', 'elephant'];
 
-console.log(animals);
+// mes galime pasiimti kazkoki zodi is musu masyvo naudojant indeksa:
+console.log(animals[0]); // siuo atveju mes pasiemem 'cat'
 
 animals[2] = 'rat';
 // tam kad prideti nauja elementa, mes galime paimti musu sarasa ir
