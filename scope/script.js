@@ -9,8 +9,22 @@ const printName = () => {
     let myName = 'scope name'; // jis pasiekiamas tik block scope viduje
     console.log(myName);
   }
+
   console.log(functionName);
 };
 
 printName();
 console.log(globalName);
+
+let myName = 'global scope name';
+
+function nameScope() {
+  let myName = 'function scope name';
+  if (true) {
+    let myName = 'block scope name';
+    console.log(myName);
+  }
+  console.log(myName);
+}
+console.log(myName);
+nameScope();
