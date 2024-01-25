@@ -20,3 +20,12 @@ console.log(message.toLowerCase());
 let trimMessage = '   ';
 
 if (trimMessage.trim()) console.log('tekstas yra');
+
+// split && join
+console.log(
+  '===================== split && join metodai ====================='
+);
+let stringToSplit = 'Labas rytas, Lietuva, 2024';
+//      ['Labas rytas', 'Lietuva', '2024'] => Labas rytas! Lietuva! 2024
+let result = stringToSplit.split(',').join('!');
+console.log(result);
