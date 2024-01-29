@@ -31,7 +31,19 @@ if (age !== ageString) {
 
 console.log('========================================');
 
-let x = '';
+// ternary operator pavyzdys
+let x = 0;
+if (x !== 0) {
+  console.log('x is is not 0');
+} else {
+  console.log('x is 0');
+}
+
+// jeigu mes turime tik du atvejus, tai galime naudoti ternary operatoriu
+x !== 0 ? console.log('x is not 0') : console.log('x is 0');
+
+// truthy and falsy values
+x = '';
 
 if (x) {
   console.log('x is truthy');
