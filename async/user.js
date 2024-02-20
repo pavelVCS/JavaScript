@@ -1,7 +1,7 @@
 const fetchUser = async () => {
   try {
     const response = await fetch(
-      'https://jsonplaceholder.typicode.com/users/111'
+      'https://jsonplaceholder.typicode.com/users/1'
     );
     console.log(response);
 
