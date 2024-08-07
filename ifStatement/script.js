@@ -32,7 +32,6 @@ if (robotPeace === yourPeace) {
 }
 
 // ternary operator
-
 let myPoints = 90;
 
 let result = myPoints >= 100 ? 'Winner' : 'Loser';
