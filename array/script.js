@@ -1,5 +1,5 @@
 //               0  1  2  3  4
-const numbers = [4, 2, 1, 5, 7];
+const numbers = [number, 2, 1, 5, 7];
 
 //                 0      1       2          3          4
 const animals = ['cat', 'dog', 'parrot', 'rabbit', 'elephant']; // F242J34
@@ -24,3 +24,7 @@ console.log(animals[animals.length - 1]);
 let name = 'Alice ';
 
 console.log(name[name.length - 1]); // tuščia vieta
+
+let item1 = { name: 'milk', price: 10 };
+let item2 = { name: 'bread', price: 5 };
+let item3 = { name: 'water', price: 1 };
