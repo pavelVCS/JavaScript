@@ -1,20 +1,50 @@
-//               0      1       2       3        4          5
-let animals = ['cat', 'dog', 'mouse', 'horse', 'bird', 'elephant'];
+//               0      1       2       3        4          5       6
+let animals = ['cat', 'dog', 'mouse', 'horse', 'bird', 'elephant', 'lion'];
 
-// for (let i = 0; i < animals.length; i++) {
-//   console.log('indeksas: ', i, 'reiksme: ', animals[i]);
-// }
+//              i < 7
+for (let i = 0; i < animals.length; i++) {
+  if (animals[i] === 'mouse') {
+    console.log(animals[i]);
+    break;
+  }
+  console.log('triggered');
+}
 
 // -----------------------------------------------
+// for of ciklas
 
-// for (let value of animals) {
-//   console.log(value);
-// }
-
-let vidurkis = 0;
-let suma = 0;
-
-if (typeof vidurkis === 'number') {
-  console.log('vidurkis: ', typeof vidurkis);
-  console.log('suma: ', typeof suma);
+for (let item of animals) {
+  // console.log(item);
 }
+
+// -----------------------------------------------
+// for in ciklas
+
+const car = {
+  name: 'BMW',
+  model: 'GT',
+  year: 2017,
+  color: 'black',
+};
+
+for (let key in car) {
+  // console.log(`${key}:  ${car[key]}`);
+}
+
+// -----------------------------------------------
+// while ciklas
+
+let i = 5;
+
+while (i < 5) {
+  console.log('while ciklas', i);
+  i++;
+}
+
+// -----------------------------------------------
+// do while ciklas
+
+do {
+  // console.log('do while ciklas', i);
+  i++;
+} while (i < 5);

@@ -1,9 +1,11 @@
-let defaultFunk = function () {
-  return 'Hello, this is default function';
+function defaultFunk(par) {
+  console.log('This is your parameter: ', par);
+}
+
+const arrowFunk = (param) => {
+  console.log('This is an arrow function', param);
 };
 
-let arrowFunk = () => {
-  return 'Hello, this is arrow function';
-};
+defaultFunk(123);
 
-console.log(arrowFunk());
+arrowFunk('asd');

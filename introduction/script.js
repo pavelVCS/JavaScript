@@ -1,15 +1,27 @@
-var myName = 'Pavelas';
-const mySurname = 'Sucharev';
-let age = 16;
-const hasCar = true;
-let hasWife;
+global = 1; // global variable
+var funkVariable = 2; // function variable
+let letVariable = 3; // block variable
+const constVariable = 4; // constant variable, block variable
 
-let incomes = 1000;
-let expenses = 800;
+// types of variables: primitive
+let stringVariable = "It's me";
+let numberVariable = 1;
+let booleanVariable = false;
+let undefinedVariable = undefined;
+let nullVariable = null;
 
-console.log(typeof myName);
-console.log(typeof age);
-console.log(typeof hasCar);
-console.log(typeof hasWife);
+let name = 'Steven';
+let greeting = `Hello, ${name}!`;
 
-console.log('Like pinigai:', incomes - expenses);
+// console.log(greeting);
+
+let phone = 200;
+let headphones = 100;
+let count = 3;
+
+let result = (phone + headphones) * count;
+
+x = 15;
+y = 15;
+
+console.log(!booleanVariable);

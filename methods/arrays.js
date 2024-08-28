@@ -1,100 +1,40 @@
-let arr = [2, 3, 5, 7];
+const names = ['Bob', 'John', 'Alice', 'Ema', 'Kate', 'Steven'];
+const cars = ['BMW', 'Audi', 'VW', 'Toyota', 'Mazda', 'Ford'];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-let numberToFind = 2;
+function iterateArray(arr, callback) {
+  const newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    const result = callback(arr[i], i, arr);
+    newArr.push(result);
+  }
 
-// inlcudes metodas grazina true arba false
-let includesResult = arr.includes(numberToFind);
-// masyvo indexOf metodas grazina indeksa pagal nurodyta reiksme
-
-if (includesResult) {
-  let indexOfResult = arr.indexOf(numberToFind);
-  console.log('rastas:', includesResult);
-  console.log('skaiciaus indeksas:', indexOfResult);
-} else {
-  console.log(`skaicius ${numberToFind} nerastas`);
+  return newArr;
 }
 
-// sort
-console.log('===================== sort metodas =====================');
-
-let numbers = [2, 3, 5, 7, 1, 4, 6, 9, 8];
-
-numbers.sort();
-console.log('original numbers', numbers);
-
-// every && some
-console.log(
-  '===================== every && some metodai ====================='
-);
-let pazymiai = [10, 8, 6, 7, 9, 4, 5];
-
-// tikrina ar visi pazymiai atitinka salyga
-let pazymiaiTeigiami = pazymiai.every((pazymys) => {
-  return pazymys > 4;
+const double = iterateArray(numbers, (number) => {
+  return number * 2;
 });
 
-console.log(
-  pazymiaiTeigiami ? 'visi pazymiai teigiami' : 'yra neigiamu pazymiu'
-);
-
-// tikrina ar bent vienas pazymys atitinka salyga
-let bentVienasNeigiamas = pazymiai.some((pazymys) => {
-  return pazymys <= 4;
+const tripple = iterateArray(numbers, (number) => {
+  return number * 3;
 });
 
-console.log(
-  bentVienasNeigiamas ? 'yra bent vienas neigiamas pazymys' : 'visi teigiami'
-);
+const quadruple = numbers.map((num) => num * 4);
 
-// find
-console.log('===================== find metodas =====================');
-let names = ['Jonas', 'Petras', 'Antanas', 'Povilas', 'Rasa', 'Ona'];
+console.log(double);
+console.log(tripple);
+console.log(quadruple);
 
-let result = names.find((name) => {
-  return name === 'Povilasss';
-});
+// iterateArray(names, (item) => {
+//   console.log('Hello, ', item);
+// });
 
-// console.log(result);
+// iterateArray(cars, (item) => {
+//   console.log('Car:', item);
+// });
 
-let arrayOfStudents = [
-  { name: 'Jonas', age: 99 },
-  { name: 'Petras', age: 88 },
-  { name: 'Antanas', age: 77 },
-  { name: 'Povilas', age: 66 },
-  { name: 'Rasa', age: 55 },
-  { name: 'Ona', age: 44 },
-];
-
-let myStudent = arrayOfStudents.find((student) => {
-  return student.age < 70;
-});
-
-console.log(myStudent);
-
-// filter
-console.log('===================== filter metodas =====================');
-
-let allYoungStudents = arrayOfStudents.filter((student) => {
-  return student.age < 70;
-});
-
-console.log(allYoungStudents);
-
-// forEach
-console.log('===================== forEach metodas =====================');
-
-let fruits = ['orange', 'apple', 'banana', 'pear'];
-
-fruits.forEach((item, ind, arr) => {
-  console.log('my fruit:', item, 'with index:', ind, 'all fruitus:', arr);
-});
-
-// map
-console.log('===================== map metodas =====================');
-let guestsNames = ['Jonas', 'Petras', 'Antanas', 'Povilas', 'Rasa', 'Ona'];
-
-let guestsWithGreetings = guestsNames.map((oneGuest) => {
-  return `Gerb. ${oneGuest}`;
-});
-
-console.log(guestsWithGreetings);
+// names.forEach((item, ind) => {
+//   console.log('this is forEach: ', item);
+//   console.log('index: ', ind);
+// });

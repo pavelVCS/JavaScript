@@ -4,27 +4,26 @@
 
 const printName = () => {
   if (true) {
-    globalName = 'global name'; // jis pasiekiamas visur
-    var functionName = 'function name'; // jis pasiekiamas funkcijos viduje
-    let myName = 'scope name'; // jis pasiekiamas tik block scope viduje
+    password = 'global variable'; // jis pasiekiamas visur
+    var functionName = 'function variable'; // jis pasiekiamas funkcijos viduje
+    let myName = 'scope variable'; // jis pasiekiamas tik block scope viduje
     console.log(myName);
   }
-
   console.log(functionName);
 };
 
 printName();
-console.log(globalName);
+console.log(password);
 
-let myName = 'global scope name';
+// let myName = 'global scope name';
 
-function nameScope() {
-  let myName = 'function scope name';
-  if (true) {
-    let myName = 'block scope name';
-    console.log(myName);
-  }
-  console.log(myName);
-}
-console.log(myName);
-nameScope();
+// function nameScope() {
+//   let myName = 'function scope name';
+//   if (true) {
+//     let myName = 'block scope name';
+//     console.log(myName);
+//   }
+//   console.log(myName);
+// }
+// console.log(myName);
+// nameScope();
