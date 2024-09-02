@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">Hello here!</h1>
+    <h2 class="subClass" id="subtitle">This is subtitle</h2>
+
+    <!-- list -->
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+    </ul>
+
+    <button id="clickMe">Click me</button>
+
+    <script>
+      //button
+      document.getElementById('clickMe').addEventListener('click', () => {
+        const title = document.getElementById('title');
+        title.innerHTML = '<span>Change title</span>'; // innerHTML pakeis viska iki span'o
+        title.textContent = `<span>Change title</span>`; // textContent pakeis viska iki span'o kaip teksta
+
+        document.querySelector('#subtitle').style.color = 'turquoise';
+
+        // list
+        document.querySelectorAll('li').forEach((element, item) => {
+          if (item % 2 === 0) {
+            element.style.color = 'red';
+          } else {
+            element.style.color = 'blue';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+.titleStyles {
+  color: turquoise;
+  background-color: black;
+  font-size: 40px;
+}
+
+.bookListItem {
+  font-size: 20px;
+  font-weight: 900;
+  color: rgb(108, 223, 246);
+  background-color: black;
+}
