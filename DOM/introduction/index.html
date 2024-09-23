@@ -27,7 +27,7 @@
       //button
       document.getElementById('clickMe').addEventListener('click', () => {
         const title = document.getElementById('title');
-        title.innerHTML = '<span>Change title</span>'; // innerHTML pakeis viska iki span'o
+        // title.innerHTML = '<span>Change title</span>'; // innerHTML pakeis viska iki span'o
         title.textContent = `<span>Change title</span>`; // textContent pakeis viska iki span'o kaip teksta
 
         document.querySelector('#subtitle').style.color = 'turquoise';
@@ -40,6 +40,8 @@
             element.style.color = 'blue';
           }
         });
+
+        document.querySelector('ul').innerHTML = '';
       });
     </script>
   </body>

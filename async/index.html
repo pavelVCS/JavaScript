@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <h1>waiting...</h1>
+
+    <script>
+      const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve({
+            status: 'ok',
+            message: 'Promise resolved',
+            data: {
+              name: 'John',
+              age: 25,
+            },
+          });
+        }, 3000);
+        // reject({
+        //   status: 'error',
+        //   message: 'Promise rejected',
+        // });
+      });
+
+      promise
+        .then((response) => {
+          console.log('Promise response:', response.data.name);
+          document.querySelector('h1').textContent = response.data.name;
+        })
+        .catch((error) => {
+          document.querySelector('h1').textContent =
+            'something went wrong. Please try again later';
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>
